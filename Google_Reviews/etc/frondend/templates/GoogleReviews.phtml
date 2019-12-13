@@ -1,0 +1,24 @@
+<?php
+/**
+* Google Reviews
+*
+* @category    Elegento
+* @package     Elegento_Google_Reviews
+* @author      Dimitris Liaropoulos
+*
+*/
+$str = <<<MY_MARKER
+<script type="text/javascript">
+jQuery(document).ready(function( $ ) {
+ $("#google-reviews").googlePlaces({
+      placeId: '*****' //Find placeID @: https://developers.google.com/places/place-id
+    , render: ['reviews']
+    , min_rating: 4
+    , max_rows:4
+ });
+});
+</script>
+MY_MARKER;
+
+echo $str;
+?>
